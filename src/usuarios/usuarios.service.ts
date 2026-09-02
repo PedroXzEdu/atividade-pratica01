@@ -9,7 +9,7 @@ export type Usuario = {
   senhaHash: string;
   papel: Papel;
   ativo: boolean;
-};
+}
 
 export type UsuarioAutenticado = Omit<Usuario, 'senhaHash'>;
 
