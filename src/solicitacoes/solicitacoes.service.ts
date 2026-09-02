@@ -30,4 +30,15 @@ export class SolicitacoesService {
     solicitacao.status = 'aprovada';
     return solicitacao;
   }
+
+  gerarRelatorio() {
+    const solicitacoesTotais = this.solicitacoes.length;
+    
+    const solicitacoesPorStatus = {
+      pendente: this.solicitacoes.filter(s => s.status === "pendente").length,
+      aprovada: this.solicitacoes.filter(s => s.status === "aprovada").length
+    }
+
+    return {solicitacoesTotais, solicitacoesPorStatus}
+  }
 }
