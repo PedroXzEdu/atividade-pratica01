@@ -9,7 +9,7 @@ export type Usuario = {
   senhaHash: string;
   papel: Papel;
   ativo: boolean;
-}
+};
 
 export type UsuarioAutenticado = Omit<Usuario, 'senhaHash'>;
 
@@ -20,7 +20,7 @@ export class UsuariosService {
       id: 1,
       nome: 'Ana Lima',
       email: 'ana@empresa.com',
-      senhaHash:'$2b$12$BHvjuSO.qK6SVROfR.VeHO8KpokP.h6R84wGW.EvQemoc1jH4vd/i',
+      senhaHash: '$2b$12$BHvjuSO.qK6SVROfR.VeHO8KpokP.h6R84wGW.EvQemoc1jH4vd/i',
       papel: 'gestor',
       ativo: true,
     },
